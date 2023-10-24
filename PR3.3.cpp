@@ -13,8 +13,9 @@ int main()
 	double R2; // вхідний параметр 2
 	double y; // результат обчислення виразу
 	cout << "R1 = "; cin >> R1;
+	cout << "R2 = "; cin >> R2;
 	cout << "x = "; cin >> x;
-	R2 = R1 * 2;
+	
 	// розгалуження в повній формі
 	if (x <= -6)
 		y = R2 / 2;
@@ -23,10 +24,10 @@ int main()
 			y = (R2 / 2) + ((0 - (R2 / 2)) / (- 2 * R2 + 6)) * (x + 6);
 		else
 			if (-2 * R2 < x && x <= 0)
-				y = sqrt(pow(R2 , 2) - pow((x - R2), 2));
+				y = sqrt(pow(R2 , 2) - pow((x + R2) , 2));
 			else
 				if (0 < x && x <= 2 * R1)
-					y = sqrt(pow(R1 , 2) - pow((x - R1) , 2));
+					y = -R1 - (sqrt(pow(R1 , 2) - pow(x , 2)));
 				else
 					y = ((-R1) / (2*R1 + 1 - 2 * R1)) * (x + 6);
 	cout << endl;
