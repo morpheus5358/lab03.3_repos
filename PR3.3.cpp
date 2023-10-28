@@ -27,9 +27,9 @@ int main()
 				y = sqrt(pow(R2 , 2) - pow((x + R2) , 2));
 			else
 				if (0 < x && x <= 2 * R1)
-					y = -R1 - (sqrt(pow(R1 , 2) - pow(x , 2)));
+					y = -sqrt(pow(R1 , 2) - pow((x - R1) , 2));
 				else
-					y = ((-R1) / (2*R1 + 1 - 2 * R1)) * (x + 6);
+					y = ((-R1) / (1)) * (x - 2 * R1);
 	cout << endl;
 	cout << "y = " << y << endl;
 	cin.get();
